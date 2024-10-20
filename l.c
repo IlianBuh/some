@@ -23,22 +23,29 @@ void getBussesNums(const unsigned int portData, unsigned int *primBusNum, unsign
 void printName(unsigned int idReg){
     unsigned int devId = (idReg & 0xFFFF0000) >> 16;
     unsigned int venId = (idReg & 0x0000FFFF);
+    for (int i = 0;i < PCI_VENTABLE_LEN; i++){
+        if (PciVenTable[i].VenId == venId){
+            printf("######\nVendor ID: %04x; Vendor short name: %s; Vendor full name: %s.\n", PciVenTable[i].VenId, PciVenTable[i].VenShort, PciVenTable[i].VenFull);
+            break;
+        }
+    }
     for (int i = 0;i < PCI_DEVTABLE_LEN; i++){
         if (PciDevTable[i].DevId == devId && PciDevTable[i].VenId == venId){
-            printf("######\nChip: %s\nChip description: %s-\n-----\n", PciDevTable[i].Chip, PciDevTable[i].ChipDesc);
+            printf("Chip: %s\nChip description: %s-\n-----\n", PciDevTable[i].Chip, PciDevTable[i].ChipDesc);
             return;
         }
     }
 }
 void printPCIDeviceNumber(unsigned PCIBusNum, unsigned int deviceNum, unsigned int funcNum){
-    printf("--\nPCI bus number: %x\nDevice number: %x\nFunction number: %x\n--\n", PCIBusNum >> 16, deviceNum >> 11, funcNum >> 8);
+    printf("--\nPCI bus number: %02x\nDevice number: %02x\nFunction number: %02x\n--\n", PCIBusNum >> 16, deviceNum >> 11, funcNum >> 8);
 }
 int printClassCode(unsigned int classCode){
 
     int base = (classCode & 0x00ff0000) >> 16;
     int sub = (classCode & 0x0000ff00) >> 8;
     int spec = (classCode & 0x000000ff);
-    printf("Class code: %x\n", classCode);
+    
+    printf("Class code: %06x\n", classCode);
     for (int i = 0; i < PCI_CLASSCODETABLE_LEN;i ++){
         if (PciClassCodeTable[i].BaseClass == base &&
             PciClassCodeTable[i].SubClass == sub &&
@@ -51,6 +58,7 @@ int printClassCode(unsigned int classCode){
                 return 0;
         }
     }
+    
     return 1;
 }
 void printBridgeInfo(unsigned int portData, unsigned int baseAddr, unsigned PCIBusNum, unsigned int deviceNum, unsigned int funcNum){
@@ -64,7 +72,8 @@ void printBridgeInfo(unsigned int portData, unsigned int baseAddr, unsigned PCIB
 void printDeviceInfo(unsigned int intPin, unsigned int classCode, unsigned PCIBusNum, unsigned int deviceNum, unsigned int funcNum){
     printf("Is device.\n");
     printPCIDeviceNumber(PCIBusNum, deviceNum, funcNum);
-    printf("Interrupt pin: %x\n", intPin);
+    printf("Interrupt pin: %02x\n", intPin);
+    
     if (printClassCode(classCode)){
         printf("!There is no any information about device's class.\n");
     }
@@ -75,7 +84,7 @@ int exists(unsigned int portData){
     return ~portData;
 }
 int isBridge(unsigned int portData){
-    return exists(portData) && (headerType & portData);
+    return (portData & headerType);
 }
 
 unsigned int getBaseAddr(const unsigned int PCIBusNum, const unsigned int deviceNum, const unsigned int funcNum){
@@ -87,14 +96,14 @@ void getBussesNums(const unsigned int portData, unsigned int *primBusNum, unsign
     *primBusNum = (portData & 0x000000FF);
 }
 unsigned int getPCIData(const unsigned int addr, const unsigned int reg){
-    outl(addr | reg, PCI_manage_reg);
+    outl(addr + reg, PCI_manage_reg);
     return inl(PCI_data_reg);
 }
 unsigned int getIntPin(unsigned int portData){
     return (portData >> 8) && 0xFF;
 }
 unsigned int getClassCode(unsigned int portData){
-    return portData >> 8;
+    return (portData >> 8);
 }
 
 unsigned int decodeIntPort(unsigned int baseAddr){
@@ -116,19 +125,26 @@ void checkFunctions(const int funcCount, const int funcStep,
     unsigned int portData, baseAddr = 0, intPin, classCode;
 
     for (int funcNum = 0;funcNum < funcCount; funcNum += funcStep){
+
         baseAddr = getBaseAddr(PCIBusNum, deviceNum, funcNum);
+        portData = getPCIData(baseAddr, 0);
 
-        portData = getPCIData(baseAddr, headReg);
         if (exists(portData)){
-            printName(getPCIData(baseAddr, 0));
+            printName(portData);
+            portData = getPCIData(baseAddr, headReg);
+            
             if (isBridge(portData)){
-                portData = getPCIData(baseAddr, busReg);
 
+                portData = getPCIData(baseAddr, busReg);
                 printBridgeInfo(portData, baseAddr, PCIBusNum, deviceNum, funcNum);
-            } else if (exists(portData)) {
+            }
+             else {
+
                 intPin = decodeIntPort(baseAddr);
                 classCode = decodeClassCode(baseAddr);
+                
                 printDeviceInfo(intPin, classCode, PCIBusNum, deviceNum, funcNum);
+            
             }
         }
     }
