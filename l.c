@@ -16,7 +16,7 @@ unsigned int getPCIData(const unsigned int addr, const unsigned int reg);
 void getBussesNums(const unsigned int portData, unsigned int *primBusNum, unsigned int *secBusNum, unsigned int *subBusNum);
 
 #define oldBit 0x80000000 
-#define headerType 0x00800000
+#define headerType 0x00010000
 #define PCI_manage_reg 0xCF8
 #define PCI_data_reg 0xCFC
 
@@ -25,7 +25,7 @@ void printName(unsigned int idReg){
     unsigned int venId = (idReg & 0x0000FFFF);
     for (int i = 0;i < PCI_VENTABLE_LEN; i++){
         if (PciVenTable[i].VenId == venId){
-            printf("######\nVendor ID: %04x; Vendor short name: %s; Vendor full name: %s.\n", PciVenTable[i].VenId, PciVenTable[i].VenShort, PciVenTable[i].VenFull);
+            printf("Vendor ID: %04x; Vendor short name: %s; Vendor full name: %s.\n", PciVenTable[i].VenId, PciVenTable[i].VenShort, PciVenTable[i].VenFull);
             break;
         }
     }
@@ -77,7 +77,7 @@ void printDeviceInfo(unsigned int intPin, unsigned int classCode, unsigned PCIBu
     if (printClassCode(classCode)){
         printf("!There is no any information about device's class.\n");
     }
-    printf("*********\n");
+    printf("******************************\n");
 }
 
 int exists(unsigned int portData){
@@ -130,6 +130,7 @@ void checkFunctions(const int funcCount, const int funcStep,
         portData = getPCIData(baseAddr, 0);
 
         if (exists(portData)){
+            printf("##########################\nAddress of the port: %08x\n", baseAddr);
             printName(portData);
             portData = getPCIData(baseAddr, headReg);
             
