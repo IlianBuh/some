@@ -1,0 +1,649 @@
+##########################
+Address of the port: 80000000
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82443BX/ZX
+Chip description: 440BX/ZX AGPset Host Bridge-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 00
+Function number: 00
+--
+Interrupt pin: 00
+Class code: 060000
+Base class: Bridge Device
+Subclass: Host/PCI
+Specific register: 
+******************************
+##########################
+Address of the port: 80000800
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82443BX/ZX
+Chip description: 440BX/ZX AGPset PCI-to-PCI bridge-
+-----
+Is bridge.
+--
+PCI bus number: 00
+Device number: 01
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: 1
+Suboradinate buss number: 1
+--------
+##########################
+Address of the port: 80003800
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82371AB/EB/MB
+Chip description: PIIX4/4E/4M ISA Bridge-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 07
+Function number: 00
+--
+Interrupt pin: 00
+Class code: 060100
+Base class: Bridge Device
+Subclass: PCI/ISA
+Specific register: 
+******************************
+##########################
+Address of the port: 80003900
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82371AB/EB/MB
+Chip description: PIIX4/4E/4M IDE Controller-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 07
+Function number: 01
+--
+Interrupt pin: 00
+Class code: 01018a
+!There is no any information about device's class.
+******************************
+##########################
+Address of the port: 80003b00
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82371AB/EB/MB
+Chip description: PIIX4/4E/4M Power Management Controller-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 07
+Function number: 03
+--
+Interrupt pin: 00
+Class code: 068000
+Base class: Bridge Device
+Subclass: Other
+Specific register: 
+******************************
+##########################
+Address of the port: 80003f00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Chip: 0X0880
+Chip description: VMWare VMCI Bus Device-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 07
+Function number: 07
+--
+Interrupt pin: 01
+Class code: 088000
+Base class: Base Systems Peripheral
+Subclass: Other
+Specific register: 
+******************************
+##########################
+Address of the port: 80007800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Chip: 9500MGS
+Chip description: NVIDIA-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 0f
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 030000
+Base class: Display Controller
+Subclass: PC Compatible
+Specific register: VGA
+******************************
+##########################
+Address of the port: 80008000
+Vendor ID: 1000; Vendor short name: LSI; Vendor full name: LSI Logic.
+Chip: LSI53C1020/1030
+Chip description: PCI-X to Ultra320 SCSI Controller-
+-----
+Is device.
+--
+PCI bus number: 00
+Device number: 10
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 010000
+Base class: Mass Storage Controller
+Subclass: SCSI
+Specific register: 
+******************************
+##########################
+Address of the port: 80008800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 11
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: 2
+Suboradinate buss number: 2
+--------
+##########################
+Address of the port: 8000a800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: 3
+Suboradinate buss number: 3
+--------
+##########################
+Address of the port: 8000a900
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 01
+--
+Primary buss number: 0
+Secondary buss number: 4
+Suboradinate buss number: 4
+--------
+##########################
+Address of the port: 8000aa00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 02
+--
+Primary buss number: 0
+Secondary buss number: 5
+Suboradinate buss number: 5
+--------
+##########################
+Address of the port: 8000ab00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 03
+--
+Primary buss number: 0
+Secondary buss number: 6
+Suboradinate buss number: 6
+--------
+##########################
+Address of the port: 8000ac00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 04
+--
+Primary buss number: 0
+Secondary buss number: 7
+Suboradinate buss number: 7
+--------
+##########################
+Address of the port: 8000ad00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 05
+--
+Primary buss number: 0
+Secondary buss number: 8
+Suboradinate buss number: 8
+--------
+##########################
+Address of the port: 8000ae00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 06
+--
+Primary buss number: 0
+Secondary buss number: 9
+Suboradinate buss number: 9
+--------
+##########################
+Address of the port: 8000af00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 15
+Function number: 07
+--
+Primary buss number: 0
+Secondary buss number: a
+Suboradinate buss number: a
+--------
+##########################
+Address of the port: 8000b000
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: b
+Suboradinate buss number: b
+--------
+##########################
+Address of the port: 8000b100
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 01
+--
+Primary buss number: 0
+Secondary buss number: c
+Suboradinate buss number: c
+--------
+##########################
+Address of the port: 8000b200
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 02
+--
+Primary buss number: 0
+Secondary buss number: d
+Suboradinate buss number: d
+--------
+##########################
+Address of the port: 8000b300
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 03
+--
+Primary buss number: 0
+Secondary buss number: e
+Suboradinate buss number: e
+--------
+##########################
+Address of the port: 8000b400
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 04
+--
+Primary buss number: 0
+Secondary buss number: f
+Suboradinate buss number: f
+--------
+##########################
+Address of the port: 8000b500
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 05
+--
+Primary buss number: 0
+Secondary buss number: 10
+Suboradinate buss number: 10
+--------
+##########################
+Address of the port: 8000b600
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 06
+--
+Primary buss number: 0
+Secondary buss number: 11
+Suboradinate buss number: 11
+--------
+##########################
+Address of the port: 8000b700
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 16
+Function number: 07
+--
+Primary buss number: 0
+Secondary buss number: 12
+Suboradinate buss number: 12
+--------
+##########################
+Address of the port: 8000b800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: 13
+Suboradinate buss number: 13
+--------
+##########################
+Address of the port: 8000b900
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 01
+--
+Primary buss number: 0
+Secondary buss number: 14
+Suboradinate buss number: 14
+--------
+##########################
+Address of the port: 8000ba00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 02
+--
+Primary buss number: 0
+Secondary buss number: 15
+Suboradinate buss number: 15
+--------
+##########################
+Address of the port: 8000bb00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 03
+--
+Primary buss number: 0
+Secondary buss number: 16
+Suboradinate buss number: 16
+--------
+##########################
+Address of the port: 8000bc00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 04
+--
+Primary buss number: 0
+Secondary buss number: 17
+Suboradinate buss number: 17
+--------
+##########################
+Address of the port: 8000bd00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 05
+--
+Primary buss number: 0
+Secondary buss number: 18
+Suboradinate buss number: 18
+--------
+##########################
+Address of the port: 8000be00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 06
+--
+Primary buss number: 0
+Secondary buss number: 19
+Suboradinate buss number: 19
+--------
+##########################
+Address of the port: 8000bf00
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 17
+Function number: 07
+--
+Primary buss number: 0
+Secondary buss number: 1a
+Suboradinate buss number: 1a
+--------
+##########################
+Address of the port: 8000c000
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 00
+--
+Primary buss number: 0
+Secondary buss number: 1b
+Suboradinate buss number: 1b
+--------
+##########################
+Address of the port: 8000c100
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 01
+--
+Primary buss number: 0
+Secondary buss number: 1c
+Suboradinate buss number: 1c
+--------
+##########################
+Address of the port: 8000c200
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 02
+--
+Primary buss number: 0
+Secondary buss number: 1d
+Suboradinate buss number: 1d
+--------
+##########################
+Address of the port: 8000c300
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 03
+--
+Primary buss number: 0
+Secondary buss number: 1e
+Suboradinate buss number: 1e
+--------
+##########################
+Address of the port: 8000c400
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 04
+--
+Primary buss number: 0
+Secondary buss number: 1f
+Suboradinate buss number: 1f
+--------
+##########################
+Address of the port: 8000c500
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 05
+--
+Primary buss number: 0
+Secondary buss number: 20
+Suboradinate buss number: 20
+--------
+##########################
+Address of the port: 8000c600
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 06
+--
+Primary buss number: 0
+Secondary buss number: 21
+Suboradinate buss number: 21
+--------
+##########################
+Address of the port: 8000c700
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is bridge.
+--
+PCI bus number: 00
+Device number: 18
+Function number: 07
+--
+Primary buss number: 0
+Secondary buss number: 22
+Suboradinate buss number: 22
+--------
+##########################
+Address of the port: 80020000
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is device.
+--
+PCI bus number: 02
+Device number: 00
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 0c0300
+Base class: Serial Bus Controller
+Subclass: USB (Universal Serial Bus)
+Specific register: 
+******************************
+##########################
+Address of the port: 80020800
+Vendor ID: 8086; Vendor short name: Intel; Vendor full name: Intel Corporation.
+Chip: 82545EM
+Chip description: Gigabit Ethernet Controller (copper)-
+-----
+Is device.
+--
+PCI bus number: 02
+Device number: 01
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 020000
+Base class: Network Controller
+Subclass: Ethernet
+Specific register: 
+******************************
+##########################
+Address of the port: 80021000
+Vendor ID: 1274; Vendor short name: Ensoniq; Vendor full name: Ensoniq.
+Chip: ES 1370
+Chip description: AudioPCI-
+-----
+Is device.
+--
+PCI bus number: 02
+Device number: 02
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 040100
+Base class: Multimedia Device
+Subclass: Audio
+Specific register: 
+******************************
+##########################
+Address of the port: 80021800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Chip: n/a
+Chip description: Standard Enhanced PCI to USB Host Controller-
+-----
+Is device.
+--
+PCI bus number: 02
+Device number: 03
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 0c0320
+!There is no any information about device's class.
+******************************
+##########################
+Address of the port: 80022800
+Vendor ID: 15ad; Vendor short name: VMware; Vendor full name: VMware Inc..
+Is device.
+--
+PCI bus number: 02
+Device number: 05
+Function number: 00
+--
+Interrupt pin: 01
+Class code: 010601
+!There is no any information about device's class.
+******************************
